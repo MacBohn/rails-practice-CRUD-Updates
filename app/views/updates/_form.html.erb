@@ -1,0 +1,14 @@
+<%= render "shared/errors", instance: @update  %>
+<%= form_for(@update) do |f| %>
+<%= f.label :status %>
+<%= f.text_area :status %>
+
+<%= f.label :user %>
+<%= f.text_field :user  %>
+
+<%= f.label :likes %>
+<%= f.text_field :likes %>
+
+<%= f.submit %>
+
+<% end %>

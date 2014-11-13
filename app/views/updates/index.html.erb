@@ -1,0 +1,19 @@
+<%= link_to "New Update", new_update_path%>
+
+<%= notice %>
+<div class="table">
+
+<table>
+<tbody>
+
+<% @updates.each do |update| %>
+<tr>
+ <td><%= update.status %></td>
+ <td><%=link_to update.user, edit_update_path(update) %> </td>
+ <td><%= update.likes %> </td>
+<td><%= link_to 'Destroy',update, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+</div>
