@@ -31,7 +31,7 @@ class UpdatesController <ApplicationController
   def destroy
       @update = Update.find(params[:id])
     @update.destroy
-   redirect_to updates_path
+   redirect_to updates_path, notice: "Update successfully destroyed !"
   end
 
   def update_params
